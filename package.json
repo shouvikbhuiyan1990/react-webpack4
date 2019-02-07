@@ -8,7 +8,8 @@
     "prop-types": "^15.6.2",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "webpack": "^4.29.1"
+    "webpack": "^4.29.1",
+    "webpack-livereload-plugin": "^2.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.4.7",

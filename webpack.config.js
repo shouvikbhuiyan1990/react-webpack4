@@ -11,6 +11,8 @@
 
 const path = require('path');
 
+const LiveReload = require('webpack-livereload-plugin');
+
 const htmlWebpackPlugin = require('html-webpack-plugin');
 
 const cleanWebpackPlugin = require('clean-webpack-plugin');
@@ -26,6 +28,7 @@ module.exports = {
     },
     context: path.resolve(__dirname, 'src'), //this is to generalize the entry point folder as src/index.js
     plugins: [
+        new LiveReload(), //adding support for live reload
         new cleanWebpackPlugin(['public']), //cleans public folder each time during build, to remove unsed assets etc.
         new htmlWebpackPlugin({ //install new plugin html-webpack-plugin and configure it here
             template: 'index.html'
